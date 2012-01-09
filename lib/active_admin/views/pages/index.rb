@@ -5,7 +5,14 @@ module ActiveAdmin
       class Index < Base
 
         def title
-          active_admin_config.plural_resource_name
+          case config[:title]
+          when Symbol, Proc
+            call_method_or_proc_on(resource, config[:title])
+          when String
+            config[:title]
+          else
+            default_title
+          end
         end
 
         def config
@@ -34,6 +41,10 @@ module ActiveAdmin
           if active_admin_config.scopes.any?
             scopes_renderer active_admin_config.scopes
           end
+        end
+        
+        def default_title
+          active_admin_config.plural_resource_name
         end
 
         # Creates a default configuration for the resource class. This is a table
