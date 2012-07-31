@@ -4,7 +4,8 @@ module ActiveAdmin
 
     # Over-ride the default #updated_at to support the deletion of files
     def updated_at
-      paths.map { |path| File.mtime(path) rescue Time.now }.max
+      #paths.map { |path| File.mtime(path) rescue Time.now }.max
+      super
     end
 
   end
