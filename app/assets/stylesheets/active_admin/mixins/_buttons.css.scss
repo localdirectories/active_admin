@@ -2,7 +2,7 @@
   @include gradient(lighten($primary-color, 15%), darken($primary-color, 12%));
   @include rounded(200px);
   @include text-shadow(#000);
-  box-shadow(0 1px 0px rgba(0,0,0,0.10), 0 0 0 1px rgba(255,255,255, 0.2) inset);
+  box-shadow: 0 1px 0px rgba(0,0,0,0.10), 0 0 0 1px rgba(255,255,255, 0.2) inset;
   border: solid 1px #484e53;
   @include border-colors(#616a71, #484e53, #363b3f);
   color: #efefef;
@@ -23,7 +23,7 @@
   }
   
   &:active {
-    box-shadow(0 1px 3px rgba(0,0,0,0.40) inset, 0 1px 0 0px #FFF);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.40) inset, 0 1px 0 0px #FFF;
     @include gradient(lighten($primary-color, 13%), darken($primary-color, 14%));
   }
 }
@@ -31,7 +31,7 @@
 @mixin light-button {
   @include default-button;
   @include gradient(#fdfdfd, #e8e8e8);
-  box-shadow(0 1px 0px rgba(0,0,0,0.10), 0 0 0 1px rgba(255,255,255, 0.8) inset);
+  box-shadow: 0 1px 0px rgba(0,0,0,0.10), 0 0 0 1px rgba(255,255,255, 0.8) inset;
   @include border-colors(#d3d3d3, #c7c7c7, #c2c2c2);
   @include text-shadow;
   color: #777;
@@ -41,7 +41,7 @@
     @include gradient(#fdfdfd, #eaeaea);
   }
   &:active {
-    box-shadow(0 1px 3px rgba(0,0,0,0.18) inset, 0 1px 0 0px #EEE);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.18) inset, 0 1px 0 0px #EEE;
     @include gradient(#fcfcfc, #e5e4e5);
   }
   
@@ -54,7 +54,7 @@
       color: #777;
     }
     &:active {
-      box-shadow(0 1px 0px rgba(0,0,0,0.10), 0 0 0 1px #FFF inset);
+      box-shadow: 0 1px 0px rgba(0,0,0,0.10), 0 0 0 1px #FFF inset;
     }
   }
 }
